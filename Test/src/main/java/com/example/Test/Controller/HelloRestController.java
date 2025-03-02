@@ -24,4 +24,8 @@ public class HelloRestController {
         return "Hello " + name+" from Bridgelabz";
     }
 
+    @PostMapping("/post")
+    public String sayHelloPost(@RequestBody User user){
+        return "Hello " + user.getFirstName()+" "+user.getLastName()+" from Bridgelabz";
+    }
 }
