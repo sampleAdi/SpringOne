@@ -1,2 +1,0 @@
-# SpringOne
-First springboot project
