@@ -1,6 +1,7 @@
 package com.example.Test.Controller;
 
-import org.springframework.web.bind.annotation.*;
+
+import org.springframework.web.bind.annotation .*;
 import com.example.Test.model.User;
 
 @RestController
@@ -9,11 +10,18 @@ public class HelloRestController {
 
     @GetMapping(value = {"", "/", "/home"})
     public String sayHello() {
-        return "Hello From BridgeLabz!";
+        return "Hello From BridgeLabz! ! !";
+
     }
 
     @GetMapping("/query")
-    public String sayHelloWithQuery(@RequestParam(value = "name") String name) {
-        return "Hello " + name + "!";
+    public String sayHello(@RequestParam String name){
+        return "Hello " + name+" from Bridgelabz";
     }
+
+    @GetMapping("/params/{name}")
+    public String sayHelloPathVariable(@PathVariable String name){
+        return "Hello " + name+" from Bridgelabz";
+    }
+
 }
